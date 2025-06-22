@@ -1,0 +1,229 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333;
+}
+
+header {
+    background: #0b3954;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.item, .product-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.item:hover, .product-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.item img, .product-card img {
+    width: 100%;
+    max-width: 260px;
+    height: 160px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.item h4, .product-card h3 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+    color: #0b3954;
+    text-align: center;
+}
+
+.item p, .product-card .desc {
+    font-size: 0.95rem;
+    color: #555;
+    text-align: center;
+    margin: 0 0 10px;
+    min-height: 45px;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #d63447;
+    font-size: 1.15rem;
+    margin-bottom: 15px;
+}
+
+.item button, .product-card button {
+    background: #0b3954;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.25s ease;
+}
+
+.item button:hover, .product-card button:hover {
+    background: #07324a;
+}
+
+.navbar {
+    text-align: center;
+    padding: 10px;
+    background-color: #e0e0e0;
+}
+
+.navbtn, .nav-btn {
+    background-color: #0b3954;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.navbtn:hover, .nav-btn:hover {
+    background-color: #07324a;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.dropbtn {
+    background-color: #0b3954;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropbtn:hover {
+    background-color: #07324a;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1;
+    text-align: left;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.sub-bar {
+    background-color: #e0e0e0;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+}
+
+.sub-bar input[type="text"] {
+    width: 50%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.about-content h2 {
+    color: #0b3954;
+    margin-bottom: 10px;
+}
+
+.about-content p,
+.about-content ul {
+    line-height: 1.6;
+}
+
+.about-content ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+footer {
+    background-color: #0b3954;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+
+    .item img, .product-card img {
+        max-width: 200px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .dropbtn,
+    .navbtn,
+    .nav-btn {
+        width: 90%;
+        margin: 5px auto;
+    }
+}
